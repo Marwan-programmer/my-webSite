@@ -314,7 +314,7 @@ app.post("/posts", (req, res) => {
 
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    cb(null, 'front-end/imagesBlog')
+    cb(null, 'front/imagesBlog')
   },
   filename: function (req, file, cb) {
     cb(null, file.originalname)
@@ -475,7 +475,7 @@ app.get('/test/:id', (req, res) => {
 // import {router} from './routres/test.js'
 
 // server your css as static
-app.use(express.static(path.join(__dirname, "front-end")));
+app.use(express.static(path.join(__dirname, "front")));
 const routerBlog = require('./routres/routBlog');
 app.use('/', routerBlog);
 
