@@ -7,7 +7,7 @@ window.drop= drop;
 const blog=document.querySelector("#content-blog");
 
 /////get all posts by fetch
-fetch("https://teamsite3.herokuapp.com/posts")
+fetch("https://dashboard.heroku.com/posts")
 .then(req => req.json())
   .then(res => {
       
@@ -50,7 +50,7 @@ function like(index) {
 
  function active(){
  }
-fetch('https://teamsite3.herokuapp.com/like',option)
+fetch('https://dashboard.heroku.com/like',option)
 .then(responde=>responde.json())
 .then(result=>{
   like.classList.toggle('active-like');
@@ -103,7 +103,7 @@ body: JSON.stringify(dataComment),
 
 
 ////fetch
-fetch('https://teamsite3.herokuapp.com/comment',optionComment)
+fetch('https://dashboard.heroku.com/comment',optionComment)
 .then(responde=>responde.json())
 .then(result=>{
 
@@ -143,7 +143,7 @@ function drop(e){
   if(showComment.style.display === 'none') {
     showComment.style.display="block";
    
-    fetch(`https://teamsite3.herokuapp.com/comments/${numComment}`)
+    fetch(`https://dashboard.heroku.com/comments/${numComment}`)
       .then(responde=>responde.json())
       .then(resComments=>{
         for(let i=resComments.length-1;i>-1;--i){
@@ -184,7 +184,7 @@ const optionLike = {
 }
 
 
-fetch(`https://teamsite3.herokuapp.com/likes`,optionLike)
+fetch(`https://dashboard.heroku.com/likes`,optionLike)
 .then(res => res.json())
   .then(result => {
   for(let i=0;i<result.length;i++){
