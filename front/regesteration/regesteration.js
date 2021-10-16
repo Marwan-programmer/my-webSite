@@ -34,7 +34,7 @@ submit.addEventListener("click", function (e) {
   }
 
 
-  fetch("https://dashboard.heroku.com/register", option)
+  fetch("https://teamsite3.herokuapp.com/register", option)
     .then(res => res.json())
     .then(result => {
       console.log(result)

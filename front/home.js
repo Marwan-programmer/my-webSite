@@ -25,7 +25,7 @@ const proflie=document.querySelector("#register");
 
 
 if(token!=null){
-  fetch("http://localhost:3000/user",option)
+  fetch("https://teamsite3.herokuapp.com/user",option)
   .then(res => res.json())
   .then(result => {
     console.log(result);
