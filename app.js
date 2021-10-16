@@ -31,13 +31,6 @@ app.use(express.urlencoded({ extended: true }))
 // });
 
 
-headers.append('Access-Control-Allow-Origin', 'https://teamsite3.herokuapp.com/');
-headers.append('Access-Control-Allow-Credentials', 'true');
-
-
-
-
-
 var cors = require('cors')
 app.use(cors());
 
