@@ -23,12 +23,19 @@ const creatToken = (id, email) => {
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
-app.use(function (req, res, next) {
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
-  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept","auth");
-  next();
-});
+// app.use(function (req, res, next) {
+//   res.header("Access-Control-Allow-Origin", "*");
+//   res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+//   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept,"auth");
+//   next();
+// });
+
+
+headers.append('Access-Control-Allow-Origin', 'https://teamsite3.herokuapp.com/');
+headers.append('Access-Control-Allow-Credentials', 'true');
+
+
+
 
 
 var cors = require('cors')
