@@ -5,10 +5,10 @@ const router = express.Router();
 const mysql = require('mysql');
 
 const config = {
-  host: 'localhost',
-  user: 'marwan2',
-  password: '*Sql3141*',
-  database: 'teamSite'
+  host: 'sql4.freemysqlhosting.net',
+  user: 'sql4444727',
+  password: '9kYNfevp2u',
+  database: 'sql4444727'
 };
 
 

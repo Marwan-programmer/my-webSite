@@ -36,13 +36,19 @@ const mysql = require('mysql');
 const { query } = require('express');
 const { get } = require('http');
 
-const config = {
-  host: 'localhost',
-  user: 'marwan2',
-  password: '*Sql3141*',
-  database: 'teamSite'
-};
+// const config = {
+//   host: 'localhost',
+//   user: 'marwan2',
+//   password: '*Sql3141*',
+//   database: 'teamSite'
+// };
 
+const config = {
+  host: 'sql4.freemysqlhosting.net',
+  user: 'sql4444727',
+  password: '9kYNfevp2u',
+  database: 'sql4444727'
+};
 
 const pool = mysql.createPool(config);
 
@@ -487,7 +493,6 @@ app.use('/', routerPages);
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
-  console.log(__filename)
 })
 
 
