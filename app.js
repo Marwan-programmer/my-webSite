@@ -6,7 +6,7 @@ const multer = require('multer');
 const router = express.Router();
 const path = require('path');
 app.set("view engine", "ejs");
-const port = process.env.PORT || 3000
+const port = process.env.PORT || 5000
 
 ///token
 const jwt = require("jsonwebtoken");
